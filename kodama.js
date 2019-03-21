@@ -310,9 +310,8 @@
                                 var tr = d3.select(this);
                                 var titleCell = tr.append('td');
                                 var valueCell = tr.append('td');
-                                titleCell.html(item.title + ':').style(_theme.item_title);
-                                valueCell.html(item.value).style(_theme.item_value);
-
+                                titleCell.html(item.title + ':').call(multiStyles(_theme.item_title));
+                                valueCell.html(item.value).call(multiStyles(_theme.item_value));
                             });
 
                     }
